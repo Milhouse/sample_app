@@ -1,0 +1,23 @@
+<%= simple_form_for(@agency) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :federal_id_number %>
+    <%= f.input :name %>
+    <%= f.input :year_admitted %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zip %>
+    <%= f.input :phone %>
+    <%= f.input :fax %>
+    <%= f.input :website_address %>
+    <%= f.input :contact_name %>
+    <%= f.input :email_address %>
+    <%= f.input :agency_mission %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

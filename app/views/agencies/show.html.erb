@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Federal id number:</b>
+  <%= @agency.federal_id_number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @agency.name %>
+</p>
+
+<p>
+  <b>Year admitted:</b>
+  <%= @agency.year_admitted %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @agency.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @agency.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @agency.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @agency.zip %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @agency.phone %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%= @agency.fax %>
+</p>
+
+<p>
+  <b>Website address:</b>
+  <%= @agency.website_address %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%= @agency.contact_name %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%= @agency.email_address %>
+</p>
+
+<p>
+  <b>Agency mission:</b>
+  <%= @agency.agency_mission %>
+</p>
+
+
+<%= link_to 'Edit', edit_agency_path(@agency) %> |
+<%= link_to 'Back', agencies_path %>

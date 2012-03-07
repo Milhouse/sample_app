@@ -1,0 +1,47 @@
+<h1>Listing agencies</h1>
+
+<table>
+  <tr>
+    <th>Federal id number</th>
+    <th>Name</th>
+    <th>Year admitted</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Fax</th>
+    <th>Website address</th>
+    <th>Contact name</th>
+    <th>Email address</th>
+    <th>Agency mission</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agencies.each do |agency| %>
+  <tr>
+    <td><%= agency.federal_id_number %></td>
+    <td><%= agency.name %></td>
+    <td><%= agency.year_admitted %></td>
+    <td><%= agency.address %></td>
+    <td><%= agency.city %></td>
+    <td><%= agency.state %></td>
+    <td><%= agency.zip %></td>
+    <td><%= agency.phone %></td>
+    <td><%= agency.fax %></td>
+    <td><%= agency.website_address %></td>
+    <td><%= agency.contact_name %></td>
+    <td><%= agency.email_address %></td>
+    <td><%= agency.agency_mission %></td>
+    <td><%= link_to 'Show', agency %></td>
+    <td><%= link_to 'Edit', edit_agency_path(agency) %></td>
+    <td><%= link_to 'Destroy', agency, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Agency', new_agency_path %>
