@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120226235938) do
+ActiveRecord::Schema.define(:version => 20120307044145) do
+
+  create_table "agencies", :force => true do |t|
+    t.integer  "federal_id_number"
+    t.string   "name"
+    t.integer  "year_admitted"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.integer  "phone"
+    t.integer  "fax"
+    t.string   "website_address"
+    t.string   "contact_name"
+    t.string   "email_address"
+    t.text     "agency_mission"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "agencies", ["federal_id_number"], :name => "index_agencies_on_federal_id_number", :unique => true
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
