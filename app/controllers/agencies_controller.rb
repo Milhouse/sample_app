@@ -24,6 +24,7 @@ class AgenciesController < ApplicationController
   # GET /agencies/new
   # GET /agencies/new.json
   def new
+    @user = User.find(params[:user_id])
     @agency = Agency.new
 
     respond_to do |format|
@@ -40,8 +41,10 @@ class AgenciesController < ApplicationController
   # POST /agencies
   # POST /agencies.json
   def create
+    @user = User.find(params[:user_id])
     @agency = Agency.new(params[:agency])
-
+    @agency.user_id = @user.id
+    
     respond_to do |format|
       if @agency.save
         format.html { redirect_to @agency, notice: 'Agency was successfully created.' }

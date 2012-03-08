@@ -1,7 +1,11 @@
 SampleApp::Application.routes.draw do
-  resources :agencies
 
-resources :users
+resources :agencies
+
+resources :users do
+  resources :agencies
+end
+
 resources :sessions, only: [:new, :create, :destroy]
 resources :microposts, only: [:create, :destroy]
 

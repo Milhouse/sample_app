@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120307044145) do
+ActiveRecord::Schema.define(:version => 20120308020110) do
 
   create_table "agencies", :force => true do |t|
     t.integer  "federal_id_number"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120307044145) do
     t.text     "agency_mission"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "user_id"
   end
 
   add_index "agencies", ["federal_id_number"], :name => "index_agencies_on_federal_id_number", :unique => true
